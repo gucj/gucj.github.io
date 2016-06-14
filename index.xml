@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>灰太狼的测试不归路</title>
+    <link>http://gucj.github.io/</link>
+    <description>Recent content on 灰太狼的测试不归路</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jun 2016 18:31:07 +0800</lastBuildDate>
+    <atom:link href="http://gucj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test</title>
+      <link>http://gucj.github.io/post/test/</link>
+      <pubDate>Mon, 13 Jun 2016 18:31:07 +0800</pubDate>
+      
+      <guid>http://gucj.github.io/post/test/</guid>
+      <description>
+
+&lt;h2 id=&#34;标题:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;标题&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;加粗部门&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;标题2:b128b7694e4de962e0088bcb1bcb254f&#34;&gt;标题2&lt;/h2&gt;
+
+&lt;p&gt;这是测试内容&lt;/p&gt;
+
+&lt;p&gt;这是测试内容&lt;/p&gt;
+
+&lt;p&gt;[www.baidu.com]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>http://gucj.github.io/about/</link>
+      <pubDate>Mon, 13 Jun 2016 16:54:11 +0800</pubDate>
+      
+      <guid>http://gucj.github.io/about/</guid>
+      <description>&lt;p&gt;AAA
+BBB
+CCC&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>first</title>
+      <link>http://gucj.github.io/post/go/</link>
+      <pubDate>Sat, 13 Jun 2015 16:54:19 +0800</pubDate>
+      
+      <guid>http://gucj.github.io/post/go/</guid>
+      <description>
+
+&lt;h3 id=&#34;my-first-blog:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;my first blog&lt;/h3&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
