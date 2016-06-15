@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 灰太狼的测试不归路</title>
-    <link>http://gucj.github.io/post/</link>
-    <description>Recent content in Posts on 灰太狼的测试不归路</description>
+    <title>Linux和shell on 灰太狼的测试不归路</title>
+    <link>http://gucj.github.io/tags/linux%E5%92%8Cshell/</link>
+    <description>Recent content in Linux和shell on 灰太狼的测试不归路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jun 2016 18:46:48 +0800</lastBuildDate>
-    <atom:link href="http://gucj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://gucj.github.io/tags/linux%E5%92%8Cshell/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>git学习笔记</title>
@@ -213,18 +213,6 @@ stash@{0}: WIP on dev: 34b4cce branch dev
 &lt;h3 id=&#34;git命令配置别名:838dbc65f53d3c39abae78bd31a98222&#34;&gt;git命令配置别名&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375234012342f90be1fc4d81446c967bbdc19e7c03d3000&#34;&gt;git命令配置别名点击这里查看&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>不忘初心_first</title>
-      <link>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</link>
-      <pubDate>Tue, 14 Jun 2016 16:26:26 +0800</pubDate>
-      
-      <guid>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</guid>
-      <description>&lt;p&gt;2016.6.14搭起博客，这是第一篇内容，作为记录。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;希望不忘初心。&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
