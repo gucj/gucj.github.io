@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 灰太狼的测试不归路</title>
-    <link>http://gucj.github.io/post/</link>
-    <description>Recent content in Posts on 灰太狼的测试不归路</description>
+    <title>Posts on </title>
+    <link>/post/</link>
+    <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Wed, 15 Jun 2016 18:46:48 +0800</lastBuildDate>
-    <atom:link href="http://gucj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>git学习笔记</title>
-      <link>http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 15 Jun 2016 18:46:48 +0800</pubDate>
       
-      <guid>http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h3 id=&#34;git-init-初始化一个git仓库:838dbc65f53d3c39abae78bd31a98222&#34;&gt;git init ：初始化一个git仓库&lt;/h3&gt;
@@ -215,10 +214,10 @@ stash@{0}: WIP on dev: 34b4cce branch dev
     
     <item>
       <title>不忘初心_first</title>
-      <link>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</link>
+      <link>/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</link>
       <pubDate>Tue, 14 Jun 2016 16:26:26 +0800</pubDate>
       
-      <guid>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</guid>
+      <guid>/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</guid>
       <description>&lt;p&gt;2016.6.14搭起博客，这是第一篇内容，作为记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;希望不忘初心。&lt;/strong&gt;&lt;/p&gt;
