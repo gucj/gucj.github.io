@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux和shell on </title>
-    <link>/tags/linux%E5%92%8Cshell/</link>
-    <description>Recent content in Linux和shell on </description>
+    <title>Linux和shell on 灰太狼的测试不归路</title>
+    <link>http://gucj.github.io/tags/linux%E5%92%8Cshell/</link>
+    <description>Recent content in Linux和shell on 灰太狼的测试不归路</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Wed, 15 Jun 2016 18:46:48 +0800</lastBuildDate>
-    <atom:link href="/tags/linux%E5%92%8Cshell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://gucj.github.io/tags/linux%E5%92%8Cshell/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>git学习笔记</title>
-      <link>/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 15 Jun 2016 18:46:48 +0800</pubDate>
       
-      <guid>/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>
 
 &lt;h3 id=&#34;git-init-初始化一个git仓库:838dbc65f53d3c39abae78bd31a98222&#34;&gt;git init ：初始化一个git仓库&lt;/h3&gt;

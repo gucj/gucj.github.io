@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.15" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="http://gucj.github.io/css/styles.css">
+    <link rel="stylesheet" href="http://gucj.github.io/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://gucj.github.io//index.xml">
+
+    
+    <title>git学习笔记 - 灰太狼的测试不归路</title>
+    <meta property='og:title' content="git学习笔记 - 灰太狼的测试不归路">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="site">
+        <div class="title"><a href="http://gucj.github.io/">灰太狼的测试不归路</a></div>
+      </header>
+    </div>
+
+    <div class="container site">
+
+
+<div class="single">
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://gucj.github.io/"/>
+    <meta itemprop="dateModified" content="2016-06-15T18:46:48&#43;08:00">
+    <meta itemprop="headline" content="git学习笔记">
+    <meta itemprop="description" content="git init ：初始化一个git仓库 即把某个目录创建为git仓库，目录下会多一个.git 文件 git add ：添加文件到仓库 git add . 添加当前目录的所有内容 git add file 添加某个具体的文件 git rm ：从仓库删除文件 可以添加 -f 强制删除已经改动的文件 git checkout &ndash; file ：撤销工作区对某个文件的修改 git commit -m &ldquo;commitMessage&rdquo;：将改动提交到仓库，备注提交说明 备注: 在git commit前，可以进行多次git add,最终会把多次添加的所有文件都提交到仓库 git status ： 查看仓库当前状态 展示增加了哪些,删除了哪些,哪些文件修改了，但是还没有提交等信息 git diff 某个文件 ：查看文件具体改动 距离上次add时做的改动 git diff HEAD &ndash; 具体某文件 查看工作区（即当前操作电脑目录里）和版本库里最新版本的区别 git log ：查看提交日志 从最近开始倒序排列 git log &ndash;pretty=oneline:让每条提交记录显示在一行 git log &ndash;graph :可以看到分支合并图 HEAD 代表当前版本 HEAD^ 代表上一个版本 HEAD^^ 代表上上个版本 HEAD~100 代表往前第100个版本">
+    <meta itemprop="url" content="http://gucj.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://gucj.github.io/images/default.jpg" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="http://gucj.github.io/images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="灰太狼的测试不归路">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header class="clearfix">
+      <div class="pull-left">
+        <div class="image" style="background-image: url(http://gucj.github.io/images/default.jpg);"></div>
+      </div>
+
+      <div class="detail">
+        <time>Wed, Jun 15, 2016</time>
+        <h1 class="title">git学习笔记</h1>
+      </div>
+    </header>
+
+    <div class="share">
+      <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2fgucj.github.io%2fpost%2fgit%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f&t=git%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2fgucj.github.io%2fpost%2fgit%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f&text=git%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+      <a href="https://plus.google.com/share?url=http%3a%2f%2fgucj.github.io%2fpost%2fgit%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+      <a href="http://getpocket.com/edit?url=http%3a%2f%2fgucj.github.io%2fpost%2fgit%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f&title=git%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+    </div>
+
+    <div class="toc"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#git-init-初始化一个git仓库:838dbc65f53d3c39abae78bd31a98222">git init ：初始化一个git仓库</a></li>
+<li><a href="#git-add-添加文件到仓库:838dbc65f53d3c39abae78bd31a98222">git add ：添加文件到仓库</a></li>
+<li><a href="#git-rm-从仓库删除文件:838dbc65f53d3c39abae78bd31a98222">git rm ：从仓库删除文件</a></li>
+<li><a href="#git-checkout-file-撤销工作区对某个文件的修改:838dbc65f53d3c39abae78bd31a98222">git checkout &ndash; file ：撤销工作区对某个文件的修改</a></li>
+<li><a href="#git-commit-m-commitmessage-将改动提交到仓库-备注提交说明:838dbc65f53d3c39abae78bd31a98222">git commit -m &ldquo;commitMessage&rdquo;：将改动提交到仓库，备注提交说明</a></li>
+<li><a href="#git-status-查看仓库当前状态:838dbc65f53d3c39abae78bd31a98222">git status ： 查看仓库当前状态</a></li>
+<li><a href="#git-diff-某个文件-查看文件具体改动:838dbc65f53d3c39abae78bd31a98222">git diff 某个文件 ：查看文件具体改动</a></li>
+<li><a href="#git-log-查看提交日志:838dbc65f53d3c39abae78bd31a98222">git log ：查看提交日志</a>
+<ul>
+<li><a href="#git-log-pretty-oneline-让每条提交记录显示在一行:838dbc65f53d3c39abae78bd31a98222">git log &ndash;pretty=oneline:让每条提交记录显示在一行</a></li>
+<li><a href="#git-log-graph-可以看到分支合并图:838dbc65f53d3c39abae78bd31a98222">git log &ndash;graph :可以看到分支合并图</a></li>
+</ul></li>
+<li><a href="#git-reset-hard-commitid-回退到某个版本:838dbc65f53d3c39abae78bd31a98222">git reset &ndash;hard commitId ：回退到某个版本</a>
+<ul>
+<li><a href="#git-reset-hard-head-回退到上一个提交的版本:838dbc65f53d3c39abae78bd31a98222">git reset &ndash;hard HEAD^：回退到上一个提交的版本：</a></li>
+<li><a href="#git-reset-head-file-撤销缓存区的修改-重新放回工作区:838dbc65f53d3c39abae78bd31a98222">git reset HEAD file ：撤销缓存区的修改，重新放回工作区</a></li>
+</ul></li>
+<li><a href="#git-reflog-展示所有提交的记录:838dbc65f53d3c39abae78bd31a98222">git reflog ： 展示所有提交的记录</a></li>
+<li><a href="#暂存区的概念:838dbc65f53d3c39abae78bd31a98222">暂存区的概念</a></li>
+<li><a href="#git-remote-add-origin-git-server-name-path-repo-name-git-本地仓库关联远程仓库:838dbc65f53d3c39abae78bd31a98222">git remote add origin git@server-name:path/repo-name.git ：本地仓库关联远程仓库</a></li>
+<li><a href="#git-push-branchname-把本地某分支push-到远程仓库:838dbc65f53d3c39abae78bd31a98222">git push branchName：把本地某分支push 到远程仓库</a></li>
+<li><a href="#git-clone-远程仓库地址-克隆远程仓库到本地:838dbc65f53d3c39abae78bd31a98222">git clone 远程仓库地址 ：克隆远程仓库到本地</a></li>
+<li><a href="#git-branch-查看分支-展示当前是哪个分支:838dbc65f53d3c39abae78bd31a98222">git branch ：查看分支，展示当前是哪个分支</a></li>
+<li><a href="#git-branch-branchname-创建分支:838dbc65f53d3c39abae78bd31a98222">git branch branchName 创建分支</a></li>
+<li><a href="#git-checkout-branchname-切换到某个分支:838dbc65f53d3c39abae78bd31a98222">git checkout branchName 切换到某个分支</a></li>
+<li><a href="#git-checkout-b-branchname-创建并切换到某个分支:838dbc65f53d3c39abae78bd31a98222">git checkout -b branchName 创建并切换到某个分支</a>
+<ul>
+<li><a href="#git-checkout-b-branchname-origin-branchname-在本地创建和远程某分支对应的分支:838dbc65f53d3c39abae78bd31a98222">git checkout -b branchName origin/branchName：在本地创建和远程某分支对应的分支</a></li>
+</ul></li>
+<li><a href="#git-merge-no-ff-m-commitmessage-branchname-合并某分支到当前分支-并备注commit信息:838dbc65f53d3c39abae78bd31a98222">git merge &ndash;no-ff -m commitMessage branchName :合并某分支到当前分支，并备注commit信息</a>
+<ul>
+<li><a href="#git-merge-branchname-快速合并某分支到当前分支:838dbc65f53d3c39abae78bd31a98222">git merge branchName 快速合并某分支到当前分支</a></li>
+</ul></li>
+<li><a href="#git-branch-d-name-删除某分支:838dbc65f53d3c39abae78bd31a98222">git branch -d name 删除某分支</a>
+<ul>
+<li><a href="#git-branch-d-name-在分支还没有被合并时-强制删除分支:838dbc65f53d3c39abae78bd31a98222">git branch -D name:在分支还没有被合并时，强制删除分支</a></li>
+</ul></li>
+<li><a href="#git-stash-把工作现场储藏起来-等以后恢复:838dbc65f53d3c39abae78bd31a98222">git stash：把工作现场储藏起来，等以后恢复</a>
+<ul>
+<li><a href="#git-stash-list-展示所有stash的记录:838dbc65f53d3c39abae78bd31a98222">git stash list ：展示所有stash的记录</a></li>
+<li><a href="#git-stash-apply-stash-num-恢复某个stash-but不删除某个stash:838dbc65f53d3c39abae78bd31a98222">git stash apply stash@{Num}：恢复某个stash，but不删除某个stash</a></li>
+<li><a href="#git-stash-drop-stash-num-删除某个stash:838dbc65f53d3c39abae78bd31a98222">git stash drop stash@{Num}：删除某个stash</a></li>
+<li><a href="#git-stash-pop-stash-num-恢复某个stash并删除stash:838dbc65f53d3c39abae78bd31a98222">git stash pop stash@{Num}：恢复某个stash并删除stash</a></li>
+</ul></li>
+<li><a href="#git-remote-查看远程仓库的信息:838dbc65f53d3c39abae78bd31a98222">git remote：查看远程仓库的信息</a>
+<ul>
+<li><a href="#git-remote-v-显示远程仓库更详细的信息:838dbc65f53d3c39abae78bd31a98222">git remote -v ：显示远程仓库更详细的信息</a></li>
+</ul></li>
+<li><a href="#git-branch-set-upstream-本地branchname-origin-branchname-指定本地dev分支与远程分支的链接:838dbc65f53d3c39abae78bd31a98222">git branch &ndash;set-upstream 本地branchName origin/branchName：指定本地dev分支与远程分支的链接</a></li>
+<li><a href="#git-tag-tagname-eg-v1-0-打标签:838dbc65f53d3c39abae78bd31a98222">git tag tagName(eg:V1.0):打标签</a>
+<ul>
+<li><a href="#git-tag-tagname-commitid-给某次提交打标签:838dbc65f53d3c39abae78bd31a98222">git tag tagName commitId:给某次提交打标签</a></li>
+<li><a href="#git-tag-a-tagname-m-tagmessage-创建带有说明信息的标签:838dbc65f53d3c39abae78bd31a98222">git tag -a tagName -m &ldquo;tagMessage&rdquo;:创建带有说明信息的标签</a></li>
+<li><a href="#git-tag-s-tagname-m-tagmessage-创建使用pgp签名的标签:838dbc65f53d3c39abae78bd31a98222">git tag -s tagName -m &ldquo;tagMessage&rdquo;:创建使用PGP签名的标签</a></li>
+<li><a href="#git-tag-查看所有tag:838dbc65f53d3c39abae78bd31a98222">git tag ：查看所有tag</a></li>
+<li><a href="#git-show-tagname-查看某标签的信息:838dbc65f53d3c39abae78bd31a98222">git show tagName:查看某标签的信息</a></li>
+<li><a href="#git-tag-d-tagname-删除本地某标签:838dbc65f53d3c39abae78bd31a98222">git tag -d tagName:删除本地某标签</a></li>
+<li><a href="#git-push-origin-refs-tags-tagname-删除推送到远程库的标签:838dbc65f53d3c39abae78bd31a98222">git push origin :refs/tags/tagName :删除推送到远程库的标签</a></li>
+<li><a href="#git-push-origin-tagname-推送某个标签到远程:838dbc65f53d3c39abae78bd31a98222">git push origin tagName：推送某个标签到远程</a></li>
+<li><a href="#git-push-origin-tags-推送所有本地尚未推送到远程的标签到远程仓库:838dbc65f53d3c39abae78bd31a98222">git push origin &ndash;tags：推送所有本地尚未推送到远程的标签到远程仓库</a></li>
+</ul></li>
+<li><a href="#忽略特殊文件:838dbc65f53d3c39abae78bd31a98222">忽略特殊文件</a>
+<ul>
+<li><a href="#定义自己的-gitignore-忽略某些文件:838dbc65f53d3c39abae78bd31a98222">定义自己的.gitignore，忽略某些文件</a></li>
+<li><a href="#git-add-f-filename-强制添加被忽略的文件:838dbc65f53d3c39abae78bd31a98222">git add -f fileName:强制添加被忽略的文件</a></li>
+<li><a href="#git-check-ignore-v-filename-查看某个文件不能提交是因为哪个规则:838dbc65f53d3c39abae78bd31a98222">git check-ignore -v fileName：查看某个文件不能提交是因为哪个规则</a></li>
+</ul></li>
+<li><a href="#git命令配置别名:838dbc65f53d3c39abae78bd31a98222">git命令配置别名</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav></div>
+
+    <div class="article-body" itemprop="articleBody">
+
+<h3 id="git-init-初始化一个git仓库:838dbc65f53d3c39abae78bd31a98222">git init ：初始化一个git仓库</h3>
+
+<p>即把某个目录创建为git仓库，目录下会多一个.git 文件</p>
+
+<h3 id="git-add-添加文件到仓库:838dbc65f53d3c39abae78bd31a98222">git add ：添加文件到仓库</h3>
+
+<ul>
+<li>git add .    添加当前目录的所有内容</li>
+<li>git add file   添加某个具体的文件</li>
+</ul>
+
+<h3 id="git-rm-从仓库删除文件:838dbc65f53d3c39abae78bd31a98222">git rm ：从仓库删除文件</h3>
+
+<p>可以添加 -f 强制删除已经改动的文件</p>
+
+<h3 id="git-checkout-file-撤销工作区对某个文件的修改:838dbc65f53d3c39abae78bd31a98222">git checkout &ndash; file ：撤销工作区对某个文件的修改</h3>
+
+<h3 id="git-commit-m-commitmessage-将改动提交到仓库-备注提交说明:838dbc65f53d3c39abae78bd31a98222">git commit -m &ldquo;commitMessage&rdquo;：将改动提交到仓库，备注提交说明</h3>
+
+<p><strong>备注:</strong></p>
+
+<p>在git commit前，可以进行多次git add,最终会把多次添加的所有文件都提交到仓库</p>
+
+<h3 id="git-status-查看仓库当前状态:838dbc65f53d3c39abae78bd31a98222">git status ： 查看仓库当前状态</h3>
+
+<p>展示增加了哪些,删除了哪些,哪些文件修改了，但是还没有提交等信息</p>
+
+<h3 id="git-diff-某个文件-查看文件具体改动:838dbc65f53d3c39abae78bd31a98222">git diff 某个文件 ：查看文件具体改动</h3>
+
+<p>距离上次add时做的改动
+git diff HEAD &ndash; 具体某文件
+查看工作区（即当前操作电脑目录里）和版本库里最新版本的区别</p>
+
+<h3 id="git-log-查看提交日志:838dbc65f53d3c39abae78bd31a98222">git log ：查看提交日志</h3>
+
+<p>从最近开始倒序排列</p>
+
+<h4 id="git-log-pretty-oneline-让每条提交记录显示在一行:838dbc65f53d3c39abae78bd31a98222">git log &ndash;pretty=oneline:让每条提交记录显示在一行</h4>
+
+<h4 id="git-log-graph-可以看到分支合并图:838dbc65f53d3c39abae78bd31a98222">git log &ndash;graph :可以看到分支合并图</h4>
+
+<p>HEAD 代表当前版本</p>
+
+<p>HEAD^ 代表上一个版本</p>
+
+<p>HEAD^^ 代表上上个版本</p>
+
+<p>HEAD~100 代表往前第100个版本</p>
+
+<h3 id="git-reset-hard-commitid-回退到某个版本:838dbc65f53d3c39abae78bd31a98222">git reset &ndash;hard commitId ：回退到某个版本</h3>
+
+<h4 id="git-reset-hard-head-回退到上一个提交的版本:838dbc65f53d3c39abae78bd31a98222">git reset &ndash;hard HEAD^：回退到上一个提交的版本：</h4>
+
+<p>回退到其他历史提交的版本,把HEAD^ 替换为：</p>
+
+<ul>
+<li>具体某个历史提交版本的commitId,可以只写commitId前几位（eg:7位），git 会自动匹配</li>
+<li>也可以是HEAD~NUM,eg:HEAD~100(往前第100个版本)</li>
+</ul>
+
+<h4 id="git-reset-head-file-撤销缓存区的修改-重新放回工作区:838dbc65f53d3c39abae78bd31a98222">git reset HEAD file ：撤销缓存区的修改，重新放回工作区</h4>
+
+<h3 id="git-reflog-展示所有提交的记录:838dbc65f53d3c39abae78bd31a98222">git reflog ： 展示所有提交的记录</h3>
+
+<h3 id="暂存区的概念:838dbc65f53d3c39abae78bd31a98222">暂存区的概念</h3>
+
+<p>不同于SVN,git有暂存区的概念</p>
+
+<p>具体细节</p>
+
+<p><strong>1 当git add 后,先把修改的文件添加到暂存区</strong></p>
+
+<p><strong>2 当git commit 后，把暂存区的所有内容提交到当前分支</strong></p>
+
+<h3 id="git-remote-add-origin-git-server-name-path-repo-name-git-本地仓库关联远程仓库:838dbc65f53d3c39abae78bd31a98222">git remote add origin git@server-name:path/repo-name.git ：本地仓库关联远程仓库</h3>
+
+<h3 id="git-push-branchname-把本地某分支push-到远程仓库:838dbc65f53d3c39abae78bd31a98222">git push branchName：把本地某分支push 到远程仓库</h3>
+
+<p><strong>把本地master分支push 到远程仓库：  git push -u origin master</strong></p>
+
+<p>把本地的master分支推送到远程的master分支，并和远程的master分支关联起来</p>
+
+<p><strong>以后就可以直接使用git push origin master</strong></p>
+
+<h3 id="git-clone-远程仓库地址-克隆远程仓库到本地:838dbc65f53d3c39abae78bd31a98222">git clone 远程仓库地址 ：克隆远程仓库到本地</h3>
+
+<h3 id="git-branch-查看分支-展示当前是哪个分支:838dbc65f53d3c39abae78bd31a98222">git branch ：查看分支，展示当前是哪个分支</h3>
+
+<p>执行结果如下所示，展示所有的分支，* 标明当前的分支</p>
+
+<pre><code>→ git branch
+dev
+* master
+</code></pre>
+
+<h3 id="git-branch-branchname-创建分支:838dbc65f53d3c39abae78bd31a98222">git branch branchName 创建分支</h3>
+
+<h3 id="git-checkout-branchname-切换到某个分支:838dbc65f53d3c39abae78bd31a98222">git checkout branchName 切换到某个分支</h3>
+
+<h3 id="git-checkout-b-branchname-创建并切换到某个分支:838dbc65f53d3c39abae78bd31a98222">git checkout -b branchName 创建并切换到某个分支</h3>
+
+<h4 id="git-checkout-b-branchname-origin-branchname-在本地创建和远程某分支对应的分支:838dbc65f53d3c39abae78bd31a98222">git checkout -b branchName origin/branchName：在本地创建和远程某分支对应的分支</h4>
+
+<p>备注：本地和远程分支的名称最好保持一致</p>
+
+<h3 id="git-merge-no-ff-m-commitmessage-branchname-合并某分支到当前分支-并备注commit信息:838dbc65f53d3c39abae78bd31a98222">git merge &ndash;no-ff -m commitMessage branchName :合并某分支到当前分支，并备注commit信息</h3>
+
+<h4 id="git-merge-branchname-快速合并某分支到当前分支:838dbc65f53d3c39abae78bd31a98222">git merge branchName 快速合并某分支到当前分支</h4>
+
+<p><strong>说明：</strong></p>
+
+<p>git merge branchName:Fast forword 模式合并，此次合并，没有说明信息</p>
+
+<p>git merge &ndash;no-ff -m commitMessage branchName : no-ff 模式，把此次合并当做一次
+commit，需要备注此次合并的说明信息，在master上可以看到此次合并的log信息</p>
+
+<p>####git merge &ndash;no-ff -m &ldquo;merge with no-ff&rdquo; dev</p>
+
+<h3 id="git-branch-d-name-删除某分支:838dbc65f53d3c39abae78bd31a98222">git branch -d name 删除某分支</h3>
+
+<h4 id="git-branch-d-name-在分支还没有被合并时-强制删除分支:838dbc65f53d3c39abae78bd31a98222">git branch -D name:在分支还没有被合并时，强制删除分支</h4>
+
+<h3 id="git-stash-把工作现场储藏起来-等以后恢复:838dbc65f53d3c39abae78bd31a98222">git stash：把工作现场储藏起来，等以后恢复</h3>
+
+<p>对于被git管理的文件，在当前工作空间做了修改，但是未add 未commit，在当前工作空间修改后，git stash 后，储藏这些修改，git status 会隐藏这些修改（对于未被git 管理的文件不适用）</p>
+
+<h4 id="git-stash-list-展示所有stash的记录:838dbc65f53d3c39abae78bd31a98222">git stash list ：展示所有stash的记录</h4>
+
+<pre><code>git stash list
+stash@{0}: WIP on dev: 34b4cce branch dev
+</code></pre>
+
+<h4 id="git-stash-apply-stash-num-恢复某个stash-but不删除某个stash:838dbc65f53d3c39abae78bd31a98222">git stash apply stash@{Num}：恢复某个stash，but不删除某个stash</h4>
+
+<h4 id="git-stash-drop-stash-num-删除某个stash:838dbc65f53d3c39abae78bd31a98222">git stash drop stash@{Num}：删除某个stash</h4>
+
+<h4 id="git-stash-pop-stash-num-恢复某个stash并删除stash:838dbc65f53d3c39abae78bd31a98222">git stash pop stash@{Num}：恢复某个stash并删除stash</h4>
+
+<h3 id="git-remote-查看远程仓库的信息:838dbc65f53d3c39abae78bd31a98222">git remote：查看远程仓库的信息</h3>
+
+<p>远程仓库的默认名称是origin</p>
+
+<h4 id="git-remote-v-显示远程仓库更详细的信息:838dbc65f53d3c39abae78bd31a98222">git remote -v ：显示远程仓库更详细的信息</h4>
+
+<h3 id="git-branch-set-upstream-本地branchname-origin-branchname-指定本地dev分支与远程分支的链接:838dbc65f53d3c39abae78bd31a98222">git branch &ndash;set-upstream 本地branchName origin/branchName：指定本地dev分支与远程分支的链接</h3>
+
+<p>git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建</p>
+
+<h3 id="git-tag-tagname-eg-v1-0-打标签:838dbc65f53d3c39abae78bd31a98222">git tag tagName(eg:V1.0):打标签</h3>
+
+<p>默认打标签是在最新提交的commit上</p>
+
+<h4 id="git-tag-tagname-commitid-给某次提交打标签:838dbc65f53d3c39abae78bd31a98222">git tag tagName commitId:给某次提交打标签</h4>
+
+<h4 id="git-tag-a-tagname-m-tagmessage-创建带有说明信息的标签:838dbc65f53d3c39abae78bd31a98222">git tag -a tagName -m &ldquo;tagMessage&rdquo;:创建带有说明信息的标签</h4>
+
+<p>-a 指定标签名，-m 指定说明文字</p>
+
+<h4 id="git-tag-s-tagname-m-tagmessage-创建使用pgp签名的标签:838dbc65f53d3c39abae78bd31a98222">git tag -s tagName -m &ldquo;tagMessage&rdquo;:创建使用PGP签名的标签</h4>
+
+<p>签名采用PGP签名，必须首先安装gpg，如果没有找到gpg，或者没有gpg秘钥对，会报错</p>
+
+<h4 id="git-tag-查看所有tag:838dbc65f53d3c39abae78bd31a98222">git tag ：查看所有tag</h4>
+
+<h4 id="git-show-tagname-查看某标签的信息:838dbc65f53d3c39abae78bd31a98222">git show tagName:查看某标签的信息</h4>
+
+<h4 id="git-tag-d-tagname-删除本地某标签:838dbc65f53d3c39abae78bd31a98222">git tag -d tagName:删除本地某标签</h4>
+
+<h4 id="git-push-origin-refs-tags-tagname-删除推送到远程库的标签:838dbc65f53d3c39abae78bd31a98222">git push origin :refs/tags/tagName :删除推送到远程库的标签</h4>
+
+<h4 id="git-push-origin-tagname-推送某个标签到远程:838dbc65f53d3c39abae78bd31a98222">git push origin tagName：推送某个标签到远程</h4>
+
+<h4 id="git-push-origin-tags-推送所有本地尚未推送到远程的标签到远程仓库:838dbc65f53d3c39abae78bd31a98222">git push origin &ndash;tags：推送所有本地尚未推送到远程的标签到远程仓库</h4>
+
+<h3 id="忽略特殊文件:838dbc65f53d3c39abae78bd31a98222">忽略特殊文件</h3>
+
+<h4 id="定义自己的-gitignore-忽略某些文件:838dbc65f53d3c39abae78bd31a98222">定义自己的.gitignore，忽略某些文件</h4>
+
+<p>对于特殊文件，eg:数据库密码，邮箱密码等文件，不想git status 显示 Untracked files 时</p>
+
+<p>可以在git 工作区的根目录创建 .gitignore文件，把要忽略的文件名填进去，git 会自动忽略这些文件</p>
+
+<p><strong>备注：</strong></p>
+
+<p>.gitignore 文件也需要提交到git</p>
+
+<h4 id="git-add-f-filename-强制添加被忽略的文件:838dbc65f53d3c39abae78bd31a98222">git add -f fileName:强制添加被忽略的文件</h4>
+
+<h4 id="git-check-ignore-v-filename-查看某个文件不能提交是因为哪个规则:838dbc65f53d3c39abae78bd31a98222">git check-ignore -v fileName：查看某个文件不能提交是因为哪个规则</h4>
+
+<h3 id="git命令配置别名:838dbc65f53d3c39abae78bd31a98222">git命令配置别名</h3>
+
+<p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375234012342f90be1fc4d81446c967bbdc19e7c03d3000">git命令配置别名点击这里查看</a></p>
+</div>
+
+    <aside>
+
+      <div class="section"><a href="http://gucj.github.io/tags/linux%E5%92%8Cshell" class="tag">linux和shell</a></div>
+
+      
+      
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  var disqus_shortname = 'gucj';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+
+    </aside>
+
+  </article>
+</div>
+
+    </div>
+
+    <div class="container">
+      <footer class="site">
+        <p>&copy; 2016 灰太狼的测试不归路</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank" rel="nofollow">Hugo</a>, Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank" rel="nofollow">aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank" rel="nofollow">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
+</html>
+

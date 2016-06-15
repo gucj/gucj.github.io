@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>个人杂感 on </title>
-    <link>/categories/%E4%B8%AA%E4%BA%BA%E6%9D%82%E6%84%9F/</link>
-    <description>Recent content in 个人杂感 on </description>
+    <title>个人杂感 on 灰太狼的测试不归路</title>
+    <link>http://gucj.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%9D%82%E6%84%9F/</link>
+    <description>Recent content in 个人杂感 on 灰太狼的测试不归路</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Tue, 14 Jun 2016 16:26:26 +0800</lastBuildDate>
-    <atom:link href="/categories/%E4%B8%AA%E4%BA%BA%E6%9D%82%E6%84%9F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://gucj.github.io/categories/%E4%B8%AA%E4%BA%BA%E6%9D%82%E6%84%9F/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>不忘初心_first</title>
-      <link>/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</link>
+      <link>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</link>
       <pubDate>Tue, 14 Jun 2016 16:26:26 +0800</pubDate>
       
-      <guid>/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</guid>
+      <guid>http://gucj.github.io/post/%E4%B8%8D%E5%BF%98%E5%88%9D%E5%BF%83_first/</guid>
       <description>&lt;p&gt;2016.6.14搭起博客，这是第一篇内容，作为记录。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;希望不忘初心。&lt;/strong&gt;&lt;/p&gt;
